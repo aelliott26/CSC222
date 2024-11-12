@@ -36,7 +36,7 @@ TEST_CASE("Testing num_vector_sum") {
 
 TEST_CASE("Testing num_vector_product") {
     vector<int> nums = {2, 3, 7};
-    CHECK(42 == num_vector_sum(nums));
+    CHECK(42 == num_vector_product(nums));
 }
 
 
