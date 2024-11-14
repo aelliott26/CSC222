@@ -40,4 +40,15 @@ vector<int> only_evens(const vector<int>& vect) {
 }
     return s;
 }
+vector<int> only_odds(const vector<int>& vect) {
+    vector<int> s;
+    int check;
+    for (int i = 0; i < vect.size(); i++){
+    check = vect[i] % 2;
+    if (check == 0){
+        s.push_back(vect[i]);
+}
+}
+    return s;
+}
 
