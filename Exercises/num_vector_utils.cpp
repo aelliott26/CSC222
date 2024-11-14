@@ -74,4 +74,7 @@ double num_vector_mean(const vector<int>& vect) {
 }
 
 
-
+double num_vector_median(const vector<int>& vect) {
+    double s = 0;
+    return s;
+}

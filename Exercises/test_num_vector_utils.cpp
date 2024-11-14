@@ -66,4 +66,9 @@ TEST_CASE("Testing num_vector_mean") {
 }
 
 
+TEST_CASE("Testing num_vector_median") {
+    vector<int> nums = {3, 4, 8};
+    CHECK(5 == num_vector_median(nums));
+}
+
 
