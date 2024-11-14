@@ -60,3 +60,10 @@ TEST_CASE("Testing nums_between function") {
     CHECK(render_num_vector(nums2) == expected);
 }
 
+TEST_CASE("Testing num_vector_mean") {
+    vector<int> nums = {3, 4, 8};
+    CHECK(5 == num_vector_mean(nums));
+}
+
+
+

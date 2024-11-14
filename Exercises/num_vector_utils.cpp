@@ -64,3 +64,11 @@ vector<int> nums_between(const vector<int>& vect, int num1, int num2) {
     return s;
 }
 
+double num_vector_mean(const vector<int>& vect) {
+    double s = 0;
+    return s;
+}
+
+
+
+
