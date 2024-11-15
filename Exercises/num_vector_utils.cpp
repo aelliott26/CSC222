@@ -104,7 +104,7 @@ float num_vector_median(const vector<int>& vect) {
 	num1 = vect[dex-1];
 	num2 = vect[dex];
 	num3 = num1 + num2;
-	medi = num3/2;
+	medi = num3/2.;
 }
     else{
 	dex = vect.size()/2;
