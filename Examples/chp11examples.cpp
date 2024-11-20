@@ -10,10 +10,8 @@ struct Time {
 
 void Time::print()
 {
-    Time time = *this;
-    cout << time.hour << ":" << time.minute << ":" << time.second << endl;
+    cout << hour << ":" << minute << ":" << second << endl;
 }
-
 int main() {
     Time current_time = {9, 14, 30.0};
     current_time.print();
