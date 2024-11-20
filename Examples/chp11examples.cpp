@@ -44,8 +44,16 @@ bool Time::after(const Time& t2) const
 
     return (second > t2.second);
 }
-
-
+/*
+Time::Time(double secs)
+{
+    hour = int(secs / 3600.0);
+    secs -= hour * 3600.0;
+    minute = int(secs / 60.0);
+    secs -= minute * 60;
+    second = secs;
+}
+*/
 int main() {
     Time current_time = {9, 14, 30.0};
     current_time.print();
@@ -56,5 +64,6 @@ int main() {
     if (done_time.after(current_time)) {
     cout << "The bread will be done after it starts." << endl;
 }
+//    Time time(seconds);
     return 0;
 }
