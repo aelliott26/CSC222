@@ -25,5 +25,6 @@ Point Point::operator+(const Point& other) const {
 }
 
 string Point::to_string(){
-    return "on";
+
+    return "(" + ::to_string(x) + ".000000, " + ::to_string(y) + ".000000)";
 }
