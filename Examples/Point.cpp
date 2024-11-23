@@ -20,6 +20,7 @@ Point::Point(){
 }
 
 Point Point::operator+(const Point& other) const {
-    return Point(x,y);
+    return Point(x + other.x, y + other.y);
+
 }
 
