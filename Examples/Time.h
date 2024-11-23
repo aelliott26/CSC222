@@ -1,15 +1,17 @@
+#ifndef TIME_H
+#define TIME_H
+#include <string>
+using namespace std;
+
 struct Time {
-    // instance variables
-    int hour, minute;
-    double second;
-
-    // constructors
-    Time(int, int, double);
+    int s;
+    Time(int secs);
+    Time(int h, int m, int s);
+    Time(int h, int m);
     Time();
-
-    // modifiers
-    void increment(double);
-
-    // functions
-    string to_string(int);
+    string to_string();
+    Time operator+(Time &t);
 };
+
+ostream& operator<<(ostream& i, Time& t);
+#endif
