@@ -8,6 +8,9 @@ struct Point {
     Point(int xx);
     Point(int xx, int yy);
     Point();
+    Point operator+(const Point& other) const;
+
+
 };
 
 #endif
