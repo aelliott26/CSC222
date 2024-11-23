@@ -24,3 +24,6 @@ Point Point::operator+(const Point& other) const {
 
 }
 
+string Point::to_string(){
+    return "on";
+}
