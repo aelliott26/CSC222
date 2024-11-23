@@ -25,5 +25,11 @@ Time Time::operator+(Time &t){
 }
 
 string Time::to_string(){
-    return "no";
+    int m = s/60;
+    int h = m/60;
+    string sstring = ::to_string(s%60), mstring = ::to_string(m%60), hstring = ::to_string(h);
+    if (sstring.length() == 1) sstring = "0" + sstring;
+    if (mstring.length() == 1) mstring = "0" + mstring;   
+
+    return hstring + ":" + mstring + ":" + sstring;
 }
