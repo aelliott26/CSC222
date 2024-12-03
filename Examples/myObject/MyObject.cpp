@@ -32,8 +32,18 @@ string MyObject::to_string(){
 string MyObject::special_day(){
     vector<vector<int>> specdays {{},{},{},{},{},{},{},{},{},{},{},{2,25}};
     vector<vector<string>> specnames {{},{},{},{},{},{},{},{},{},{},{},{"wrong","Christmas"}};
-    return "nope";
+    
+    vector<int> specmonth = specdays[month-1];    
+    int holder;
+    string str;
 
+    for (int i = 0; i < specmonth.size(); i++) {
+	if (specmonth[i] == day){
+	    holder = i;
+}
+    str = specnames[month-1][holder];
+}
+    return str;
 
 }
 
