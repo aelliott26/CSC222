@@ -25,7 +25,7 @@ MyObject::MyObject(int dayin, int  monthin, int yearin){
 
 string MyObject::to_string(){
 
-    return "This is MyObject";
+    return ::to_string(month) + "/" + ::to_string(day) + "/" + ::to_string(year);
 }
 
 
