@@ -1,4 +1,4 @@
-#ifndef MYOBJECT_H
+// #ifndef MYOBJECT_H
 #define MYOBJECT_H
 #include <string>
 using namespace std;
@@ -13,4 +13,4 @@ struct MyObject {
     MyObject(int dayin);
 };
 
-#endif
+// #endif

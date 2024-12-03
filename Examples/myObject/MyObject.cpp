@@ -5,17 +5,14 @@
 using namespace std;
 
 MyObject::MyObject(){
-    cerr << " You need a day month and year" << endl;
 }
 
 MyObject::MyObject(int dayin){
-    cerr << "Only provided day, needs month and year" << endl;
 
 }
 
 
 MyObject::MyObject(int dayin, int  monthin){
-    cerr << "Only provided day and month, needs year" << endl;
 
 }
 

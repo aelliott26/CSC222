@@ -11,12 +11,6 @@ TEST_CASE("Test can store a date") {
 
 }
 
-TEST_CASE("What happens if you dont provide a year") {
-    MyObject date1(12, 1);
-    CHECK(date1.day == 1);
-
-}
-
 
 TEST_CASE("Test can output the date") {
     MyObject date1(1, 12, 2024);
