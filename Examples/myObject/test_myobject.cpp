@@ -3,7 +3,12 @@
 #include "MyObject.h"
 using namespace std;
 
-TEST_CASE("Test can create and render MyObject") {
-    MyObject myobj;
-    CHECK(myobj.to_string() == "This is MyObject");
+TEST_CASE("Test can store a date") {
+    MyObject date1(1, 1, 2024);
+    CHECK(date1.day == 1);
+    CHECK(date1.month == 1);
+    CHECK(date1.year == 2024);
+
 }
+
+

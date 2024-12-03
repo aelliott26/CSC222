@@ -4,12 +4,13 @@
 using namespace std;
 
 struct MyObject {
-    string str;
+    int day, month, year;
 
     MyObject();
     string to_string();
-
-
+    MyObject(int dayin, int  monthin, int yearin);
+    MyObject(int dayin, int  monthin);
+    MyObject(int dayin);
 };
 
 #endif
