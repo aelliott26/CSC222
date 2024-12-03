@@ -10,7 +10,7 @@ MyObject::MyObject(){
 
 string MyObject::to_string(){
 
-    return "a";
+    return "This is MyObject";
 }
 
 
