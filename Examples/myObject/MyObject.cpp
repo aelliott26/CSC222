@@ -5,6 +5,10 @@
 
 using namespace std;
 
+vector<vector<int>> MyObject::specdays = {{},{},{},{},{},{},{},{},{},{},{},{2,25}};
+vector<vector<string>> MyObject::specnames = {{},{},{},{},{},{},{},{},{},{},{},{"wrong","Christmas"}};
+
+
 MyObject::MyObject(){
 }
 
@@ -23,8 +27,14 @@ MyObject::MyObject(int dayin, int  monthin, int yearin){
     month = monthin;
     year = yearin;
 }
+MyObject::MyObject(int dayin, int monthin, int yearin, string newevent){
 
-MyObject::MyObject(int dayin, int  monthin, int yearin, string newevent){
+    day = dayin;
+    month = monthin;
+    year = yearin;
+
+    specnames[month-1].push_back("New Years");
+    specdays[month-1].push_back(1);
 
 }
 

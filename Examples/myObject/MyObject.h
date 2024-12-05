@@ -6,8 +6,9 @@ using namespace std;
 struct MyObject {
     int day, month, year;
 
-    vector<vector<int>> specdays {{},{},{},{},{},{},{},{},{},{},{},{2,25}};
-    vector<vector<string>> specnames {{},{},{},{},{},{},{},{},{},{},{},{"wrong","Christmas"}};
+    static vector<vector<int>> specdays;
+    static vector<vector<string>> specnames;
+
 
 
     MyObject();
