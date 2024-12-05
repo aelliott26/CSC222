@@ -38,11 +38,26 @@ MyObject::MyObject(int dayin, int monthin, int yearin, string newevent){
 
 }
 MyObject::MyObject(int dayin, int monthin, int yearin, string newevent, int rem){
+    vector<int> specmonth = specdays[month-1];
+    int holder;
+    string ss;
 
+    day = dayin;
+    month = monthin;
+    year = yearin;
+    for (int i = 0; i < specmonth.size(); i++) {
+        if (specmonth[i] == day){
+            holder = i;
+	    remove(specdays[month-1].begin(), specdays[month-1].end(), day);
+	    specdays[month-1].pop_back();
+}
+    ss = specnames[month-1][holder];
+    remove(specnames[month-1].begin(), specnames[month-1].end(), ss);
+    specnames[month-1].pop_back();
 
 }
 
-
+}
 
 
 string MyObject::to_string(){
