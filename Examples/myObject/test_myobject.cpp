@@ -35,3 +35,10 @@ TEST_CASE("Test can add events") {
     CHECK(date2.special_day() == "New Years");
 }
 
+TEST_CASE("Test can remove events") {
+    MyObject date1(1, 2, 2024, "Bad Date");
+    MyObject date2(1, 2, 2024, "Bad Date", 0);
+    MyObject date3(1, 2, 2024);
+    CHECK(date3.special_day() == "");
+}
+

@@ -18,6 +18,9 @@ struct MyObject {
     MyObject(int dayin);
     string special_day();
     MyObject(int dayin, int monthin, int yearin, string newevent);
+    MyObject(int dayin, int monthin, int yearin, string newevent, int rem);
+
+
 };
 
 // #endif

@@ -37,6 +37,12 @@ MyObject::MyObject(int dayin, int monthin, int yearin, string newevent){
     specdays[month-1].push_back(1);
 
 }
+MyObject::MyObject(int dayin, int monthin, int yearin, string newevent, int rem){
+
+
+}
+
+
 
 
 string MyObject::to_string(){
