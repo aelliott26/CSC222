@@ -24,15 +24,18 @@ MyObject::MyObject(int dayin, int  monthin, int yearin){
     year = yearin;
 }
 
+MyObject::MyObject(int dayin, int  monthin, int yearin, string newevent){
+
+}
+
+
 string MyObject::to_string(){
 
     return ::to_string(month) + "/" + ::to_string(day) + "/" + ::to_string(year);
 }
 
 string MyObject::special_day(){
-    vector<vector<int>> specdays {{},{},{},{},{},{},{},{},{},{},{},{2,25}};
-    vector<vector<string>> specnames {{},{},{},{},{},{},{},{},{},{},{},{"wrong","Christmas"}};
-    
+   
     vector<int> specmonth = specdays[month-1];    
     int holder;
     string str;

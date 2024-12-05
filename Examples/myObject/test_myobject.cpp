@@ -29,3 +29,9 @@ TEST_CASE("Test can read from the vector") {
     CHECK(date1.special_day() == expected);
 }
 
+TEST_CASE("Test can add events") {
+    MyObject date1(1, 1, 2024, "New Years");
+    MyObject date2(1, 1, 2024);
+    CHECK(date2.special_day() == "New Years");
+}
+
