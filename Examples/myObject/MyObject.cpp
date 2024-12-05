@@ -10,19 +10,30 @@ vector<vector<string>> MyObject::specnames = {{},{},{},{},{},{},{},{},{},{},{},{
 
 
 MyObject::MyObject(){
+    if (!day || !month || !year) {
+        std::cerr << "Error: Invalid value in constructor." << std::endl;
+    }
 }
 
 MyObject::MyObject(int dayin){
-
+    if (!day || !month || !year) {
+        std::cerr << "Error: Invalid value in constructor." << std::endl;
+    }
 }
 
 
 MyObject::MyObject(int dayin, int  monthin){
-
+    if (!day || !month || !year) {
+        std::cerr << "Error: Invalid value in constructor." << std::endl;
+    }
 }
 
 
 MyObject::MyObject(int dayin, int  monthin, int yearin){
+    if (!dayin || !monthin || !yearin) {
+        std::cerr << "Error: Invalid value in constructor." << std::endl;
+    }
+
     day = dayin;
     month = monthin;
     year = yearin;

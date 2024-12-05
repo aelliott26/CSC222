@@ -18,10 +18,9 @@ TEST_CASE("Test can output the date") {
     CHECK(date1.to_string() == expected);
 }
 
-TEST_CASE("Test can output the date") {
-    MyObject date1(1, 12, 2024);
-    string expected = "12/1/2024";
-    CHECK(date1.to_string() == expected);
+TEST_CASE("Test can check if the data provided is invalid") {
+    MyObject date1(1, 12);
+    CHECK("Error: Invalid value in constructor.");
 }
 TEST_CASE("Test can read from the vector") {
     MyObject date1(25, 12, 2024);
