@@ -57,6 +57,7 @@ Date::Date(int dayin, int monthin, int yearin, string newevent){
     specdays[month-1].push_back(1);
 
 }
+/*
 Date::Date(int dayin, int monthin, int yearin, string newevent, int rem){
     vector<int> specmonth = specdays[month-1];
     int holder;
@@ -78,7 +79,7 @@ Date::Date(int dayin, int monthin, int yearin, string newevent, int rem){
 }
 
 }
-
+*/
 
 string Date::to_string(){
 

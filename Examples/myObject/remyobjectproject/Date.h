@@ -19,7 +19,7 @@ struct Date {
     Date(int dayin);
     string special_day();
     Date(int dayin, int monthin, int yearin, string newevent);
-    Date(int dayin, int monthin, int yearin, string newevent, int rem);
+    // Date(int dayin, int monthin, int yearin, string newevent, int rem);
 
 
 };
