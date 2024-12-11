@@ -11,3 +11,10 @@ Fraction::Fraction() {
 	numerator = 0;
 	denominator = 1;
 }
+
+Fraction::Fraction(string s) {
+        numerator = 0;
+        denominator = 1;
+}
+
+
