@@ -9,6 +9,7 @@ struct Fraction {
     Fraction();
     Fraction(string s);
 
+    string to_string();
     void print();
 
 };
