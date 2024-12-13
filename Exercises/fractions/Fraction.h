@@ -13,6 +13,13 @@ struct Fraction {
     string to_string();
     void print();
 
+    bool operator==(const Fraction& other) const;
+    bool operator!=(const Fraction& other) const;
+    bool operator<(const Fraction& other) const;
+    bool operator<=(const Fraction& other) const;
+    bool operator>(const Fraction& other) const;
+    bool operator>=(const Fraction& other) const;
+
 };
 
 int gcd(int n, int d);

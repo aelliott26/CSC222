@@ -47,3 +47,28 @@ int gcd(int n, int d) {
     return gcd(d % n, n);
 }
 
+bool Fraction::operator==(const Fraction& other) const {
+    return true;
+}
+
+bool Fraction::operator!=(const Fraction& other) const {
+    return true;
+}
+
+bool Fraction::operator<(const Fraction& other) const {
+    return true;
+}
+
+bool Fraction::operator<=(const Fraction& other) const {
+    return true;
+}
+
+bool Fraction::operator>(const Fraction& other) const {
+    return true;
+}
+
+bool Fraction::operator>=(const Fraction& other) const {
+    return false;
+}
+
+
