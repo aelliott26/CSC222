@@ -7,6 +7,7 @@ struct Fraction {
     int numerator, denominator;
     Fraction(int n, int d);
     Fraction();
+    Fraction(int i);
     Fraction(string s);
 
     string to_string();

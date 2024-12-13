@@ -16,6 +16,11 @@ Fraction::Fraction() {
 	denominator = 1;
 }
 
+Fraction::Fraction(int i) {
+        numerator = 0;
+        denominator = 1;
+}
+
 Fraction::Fraction(string s) {
 	string slash = "/", s2 = s;
 	int slashpos = s.find(slash);
