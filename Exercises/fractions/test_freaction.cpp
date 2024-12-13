@@ -36,3 +36,10 @@ TEST_CASE("Test gcd function") {
     CHECK(gcd(18, 27) == 9);
 }
 
+TEST_CASE("Test Fractions are stored in lowest terms") {
+    Fraction f1(6, 8);
+    CHECK(f1.to_string() == "3/4");
+    Fraction f2(8, 16);
+    CHECK(f2.to_string() == "1/2");
+}
+
