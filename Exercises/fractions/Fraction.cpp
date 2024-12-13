@@ -17,7 +17,7 @@ Fraction::Fraction() {
 }
 
 Fraction::Fraction(int i) {
-        numerator = 0;
+        numerator = i;
         denominator = 1;
 }
 
