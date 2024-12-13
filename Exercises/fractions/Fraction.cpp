@@ -48,27 +48,69 @@ int gcd(int n, int d) {
 }
 
 bool Fraction::operator==(const Fraction& other) const {
-    return true;
+if (numerator == other.numerator && denominator == other.denominator) {
+	return true;
+}
+    return false;
 }
 
 bool Fraction::operator!=(const Fraction& other) const {
-    return true;
+if (numerator != other.numerator && denominator != other.denominator) {
+        return true;
+}
+    return false;
 }
 
 bool Fraction::operator<(const Fraction& other) const {
-    return true;
+	double n1 = numerator;
+	double d1 = denominator;
+        double n2 = other.numerator;
+        double d2 = other.denominator;
+
+if (n1/d1 < n2/d2) {
+        return true;
+}
+    return false;
 }
 
 bool Fraction::operator<=(const Fraction& other) const {
-    return true;
+        double n1 = numerator;
+        double d1 = denominator;
+        double n2 = other.numerator;
+        double d2 = other.denominator;
+if (numerator == other.numerator && denominator == other.denominator) {
+        return true;
+}
+if (n1/d1 < n2/d2) {
+        return true;
+}
+    return false;
 }
 
 bool Fraction::operator>(const Fraction& other) const {
-    return true;
+        double n1 = numerator;
+        double d1 = denominator;
+        double n2 = other.numerator;
+        double d2 = other.denominator;
+if (n1/d1 > n2/d2) {
+        return true;
+}
+    return false;
 }
 
 bool Fraction::operator>=(const Fraction& other) const {
+        double n1 = numerator;
+        double d1 = denominator;
+        double n2 = other.numerator;
+        double d2 = other.denominator;
+if (numerator == other.numerator && denominator == other.denominator) {
+        return true;
+}
+if (n1/d1 > n2/d2) {
+        return true;
+}
     return false;
 }
+
 
 
