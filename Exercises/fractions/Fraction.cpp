@@ -5,6 +5,9 @@ using namespace std;
 Fraction::Fraction(int n, int d) {
 	numerator = n;
 	denominator = d;
+	int gcf = gcd(numerator, denominator);
+	numerator /= gcf;
+	denominator /= gcf;
 }
 
 
