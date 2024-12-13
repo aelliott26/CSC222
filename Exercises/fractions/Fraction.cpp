@@ -24,6 +24,9 @@ Fraction::Fraction(string s) {
 }
 
 string Fraction::to_string(){
+	if (numerator/denominator){
+		return ::to_string(numerator/denominator);
+}
 	return ::to_string(numerator) + "/" + ::to_string(denominator);
 }
 
