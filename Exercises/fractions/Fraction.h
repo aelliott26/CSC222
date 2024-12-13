@@ -13,3 +13,5 @@ struct Fraction {
     void print();
 
 };
+
+int gcd(int n, int d);
