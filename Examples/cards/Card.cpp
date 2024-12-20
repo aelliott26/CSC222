@@ -78,3 +78,45 @@ bool Card::operator!=(const Card& c2) const
 {
     return (rank != c2.rank && suit != c2.suit);
 }
+
+
+std::vector<Card> build_deck()
+{
+    vector<Card> deck(52);
+    int i = 0;
+    for (Suit suit = CLUBS; suit <= SPADES; suit = Suit(suit+1)) {
+        for (Rank rank = ACE; rank <= KING; rank = Rank(rank+1)) {
+            deck[i].suit = suit;
+            deck[i].rank = rank;
+            i++;
+        }
+    }
+    return deck;
+}
+
+Deck::Deck(int size)
+{
+    vector<Card> temp(size);
+    cards = temp;
+}
+
+Deck::Deck()
+{
+    vector<Card> temp(52);
+    cards = temp;
+    int i = 0;
+    for (Suit suit = CLUBS; suit <= SPADES; suit = Suit(suit+1)) {
+        for (Rank rank = TWO; rank <= ACE; rank = Rank(rank+1)) {
+            cards[i].suit = suit;
+            cards[i].rank = rank;
+            i++;
+        }
+    }
+}
+
+void Deck::print() const
+{
+    for (int i = 0; i < cards.size(); i++) {
+        cout << cards[i].to_string() << endl;
+    }
+}

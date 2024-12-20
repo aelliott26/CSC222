@@ -23,4 +23,13 @@ struct Card
     bool operator<=(const Card&) const;
 	bool operator!=(const Card&) const;
 };
+struct Deck {
+    std::vector<Card> cards;
 
+    Deck(int n);
+    Deck();
+
+    void print() const;
+};
+
+std::vector<Card> build_deck();
