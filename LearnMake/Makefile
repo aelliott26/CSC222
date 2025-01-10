@@ -1,12 +1,22 @@
-CC = gcc # Flag for implicit rules
-CFLAGS = -g # Flag for implicit rules. Turn on debug info
+objects = foo.o bar.o all.o
+all: $(objects)
+	$(CC) $^ -o all
 
-# Implicit rule #1: blah is built via the C linker implicit rule
-# Implicit rule #2: blah.o is built via the C compilation implicit rule, because blah.c exists
-blah: blah.o
+foo.o: foo.c
+	$(CC) -c foo.c -o foo.o
 
-blah.c:
-	echo "int main() { return 0; }" > blah.c
+bar.o: bar.c
+	$(CC) -c bar.c -o bar.o
+
+all.o: all.c
+	$(CC) -c all.c -o all.o
+
+all.c:
+	echo "int main() { return 0; }" > all.c
+
+# Note: all.c does not use this rule because Make prioritizes more specific matches when there is more than one match.
+%.c:
+	touch $@
 
 clean:
-	rm -f blah*
+	rm -f *.c *.o all
