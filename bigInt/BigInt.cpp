@@ -34,8 +34,29 @@ bool BigInt::operator==(const BigInt& other) const {
 }
 
 bool BigInt::operator>(const BigInt& other) const {
-    return false;
-
+    if (negative == false && other.negative == true) {
+	return true;
 }
-
+    else if (negative == true && other.negative == false){
+	return false;
+}
+    if (digits.length() > other.digits.length()){
+	return true;
+    }
+    else if (negative == false && other.negative == false){
+        for(int i = 0; i < digits.length(); i++){
+	    if(digits[i] > other.digits[i]){
+	        return true;
+	    }
+        }
+    }
+    else if (negative == true && other.negative == true){
+        for(int i = 0; i < digits.length(); i++){
+            if(digits[i] < other.digits[i]){
+                return true;
+            }
+        }
+    }
+    return false;
+}
 
