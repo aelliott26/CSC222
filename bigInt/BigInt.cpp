@@ -61,19 +61,19 @@ bool BigInt::operator>(const BigInt& other) const {
 }
 
 bool BigInt::operator<(const BigInt& other) const {
-    return false;
+    return !((this->operator==(other)) || (this->operator>(other)));
 }
 
 bool BigInt::operator!=(const BigInt& other) const {
-    return false;
+    return !(this->operator==(other));
 }
 
 bool BigInt::operator>=(const BigInt& other) const {
-    return false;
+    return ((this->operator==(other)) || (this->operator>(other)));
 }
 
 bool BigInt::operator<=(const BigInt& other) const {
-    return false;
+    return ((this->operator==(other)) || (this->operator<(other)));
 }
 
 
