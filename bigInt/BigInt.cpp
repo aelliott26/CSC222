@@ -76,4 +76,6 @@ bool BigInt::operator<=(const BigInt& other) const {
     return ((this->operator==(other)) || (this->operator<(other)));
 }
 
-
+BigInt BigInt::operator+(const BigInt& other) const{
+    return 0;
+}
