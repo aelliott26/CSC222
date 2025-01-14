@@ -25,3 +25,7 @@ string BigInt::to_string() const
 {
     return (!negative) ? digits : "-" + digits;
 }
+
+bool BigInt::operator==(const BigInt& other) const {
+	return false;
+}
