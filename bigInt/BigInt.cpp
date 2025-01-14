@@ -33,3 +33,9 @@ bool BigInt::operator==(const BigInt& other) const {
     return false;
 }
 
+bool BigInt::operator>(const BigInt& other) const {
+    return false;
+
+}
+
+
