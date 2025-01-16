@@ -77,5 +77,18 @@ bool BigInt::operator<=(const BigInt& other) const {
 }
 
 BigInt BigInt::operator+(const BigInt& other) const{
-    return 0;
+    char digsum, carry = 0;
+    string sum = digits;
+
+    for (int i = sum.size() - 1; i >= 0; i--) {
+	digsum = (sum[i] - '0') + (other.digits[i] - '0');
+	sum[i] = digsum % 10 + '0' + carry;
+	carry = digsum > 9 ? 1 : 0;
+
+    }
+    if (carry != 0) {
+	sum = carry + sum;
+    }
+    return BigInt(sum);
 }
+

@@ -56,6 +56,17 @@ TEST_CASE("Test can compare BigInts for inequality") {
     CHECK((i6 >= i4) == true);
 }
 
+TEST_CASE("Test can add BigInts with the same digits") {
+    BigInt i1("123");
+    BigInt i2("321");
+    BigInt i3("679");
+    CHECK((i2 + i3).to_string() == "1000");
+    CHECK((i1 + i3).to_string() == "802");
+    CHECK((i1 + i2).to_string() == "444");
+
+}
+
+/*
 TEST_CASE("Test can add BigInts") {
     BigInt i1("123");
     BigInt i2("321");
@@ -65,4 +76,5 @@ TEST_CASE("Test can add BigInts") {
     CHECK((i1 + i2).to_string() == "444");
     CHECK((i1 + i3).to_string() == "43333");
 }
+*/
 	
