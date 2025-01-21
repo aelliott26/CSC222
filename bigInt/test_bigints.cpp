@@ -112,4 +112,7 @@ TEST_CASE("Test helper function to subtract digit strings with same num digits")
     CHECK(sub_common_len_digit_strs("123", "123") == "0");
     CHECK(sub_common_len_digit_strs("123", "222") == "-99");
     CHECK(sub_common_len_digit_strs("123", "119") == "4");
+    CHECK(sub_common_len_digit_strs("-123", "119") == "-242");
+    CHECK(sub_common_len_digit_strs("123", "-119") == "242");
+
 }	

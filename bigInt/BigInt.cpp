@@ -40,7 +40,38 @@ string sum_common_len_digit_strs(const string &s1, const string &s2)
 
 string sub_common_len_digit_strs(const string &s1, const string &s2)
 {
-    return "yuurrr";
+    string results, s3, s4;
+    if (s1[0] == '-') {
+        s3 = s1.substr(1, s1.size());
+        results = sum_common_len_digit_strs(s3, s2);
+        return "-" + results;
+}
+if (s2[0] == '-') {
+        s4 = s2.substr(1, s2.size());
+        results = sum_common_len_digit_strs(s4, s1);
+        return  results;
+}
+    string result(s1.size(), '0');  
+    char borrow = 0;  
+        
+    for (int i = s1.size() - 1; i >= 0; --i) {  
+        int digit1 = to_num(s1[i]) - borrow;  
+        int digit2 = to_num(s2[i]);  
+
+        if (digit1 < digit2) { 
+            digit1 += 10;  
+            borrow = 1;   
+        } else {  
+            borrow = 0;  
+        }    
+        result[i] = digit_to_char(digit1 - digit2);  
+    }  
+
+    size_t pos = result.find_first_not_of('0');  
+    if (pos != string::npos) {  
+        return result.substr(pos);  
+    }  
+    return "0"; // If the result is all zeros  
 }
 
 BigInt::BigInt()
