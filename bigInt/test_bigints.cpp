@@ -105,4 +105,11 @@ TEST_CASE("Test can add BigInts") {
     CHECK((i1 + i3).to_string() == "43333");
 }
 
-	
+
+
+TEST_CASE("Test helper function to subtract digit strings with same num digits") {
+    CHECK(sub_common_len_digit_strs("345", "123") == "222");
+    CHECK(sub_common_len_digit_strs("123", "123") == "0");
+    CHECK(sub_common_len_digit_strs("123", "222") == "-99");
+    CHECK(sub_common_len_digit_strs("123", "119") == "4");
+}	

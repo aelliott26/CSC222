@@ -38,6 +38,11 @@ string sum_common_len_digit_strs(const string &s1, const string &s2)
     return carry ? "c+" + sum : sum;
 }
 
+string sub_common_len_digit_strs(const string &s1, const string &s2)
+{
+    return "yuurrr";
+}
+
 BigInt::BigInt()
 {
     negative = false;
