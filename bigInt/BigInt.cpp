@@ -74,7 +74,7 @@ string sub_common_len_digit_strs(const string &s1, const string &s2)
 
     size_t pos = result.find_first_not_of('0');  
     if (pos != string::npos) {  
-        return result.substr(pos);  
+        result =  result.substr(pos);  
     }  else {
         return "0";  
 }
