@@ -41,17 +41,22 @@ string sum_common_len_digit_strs(const string &s1, const string &s2)
 string sub_common_len_digit_strs(const string &s1, const string &s2)
 {
     string results, s3, s4;
+    int holder = 0;
     if (s1[0] == '-') {
         s3 = s1.substr(1, s1.size());
         results = sum_common_len_digit_strs(s3, s2);
         return "-" + results;
 }
-if (s2[0] == '-') {
+    if (s2[0] == '-') {
         s4 = s2.substr(1, s2.size());
         results = sum_common_len_digit_strs(s4, s1);
         return  results;
 }
-    string result(s1.size(), '0');  
+
+    if 
+
+    holder =  (s1[0] == '-') ? s1.size() - 1 : s1.size();
+    string result(holder, '0');  
     char borrow = 0;  
         
     for (int i = s1.size() - 1; i >= 0; --i) {  
