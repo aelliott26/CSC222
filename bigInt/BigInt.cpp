@@ -190,4 +190,6 @@ BigInt BigInt::operator+(const BigInt& other) const{
     return BigInt(increment_digit_string(leading_digits) +
                   summed_common_digits.substr(2));
 }
-
+BigInt BigInt::operator-(const BigInt& other) const{
+ return 0;
+}

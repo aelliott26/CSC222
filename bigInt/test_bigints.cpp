@@ -115,4 +115,16 @@ TEST_CASE("Test helper function to subtract digit strings with same num digits")
     CHECK(sub_common_len_digit_strs("-123", "119") == "-242");
     CHECK(sub_common_len_digit_strs("123", "-119") == "242");
 
+}
+
+
+TEST_CASE("Test can subtract BigInts") {
+    BigInt i1("123");
+    BigInt i2("321");
+    BigInt i3("43210");
+    BigInt i4("10000");
+    BigInt i5("1");
+    CHECK((i1 - i2).to_string() == "-198");
+    CHECK((i4 - i5).to_string() == "9999");
+    CHECK((i3 - i2).to_string() == "42889");
 }	
