@@ -191,5 +191,9 @@ BigInt BigInt::operator+(const BigInt& other) const{
                   summed_common_digits.substr(2));
 }
 BigInt BigInt::operator-(const BigInt& other) const{
- return 0;
+    if ((*this).digits.size() == other.digits.size()) {
+        string raw_sum = sub_common_len_digit_strs((*this).digits, other.digits);
+        return BigInt(raw_sum);
+    }
+    return 0;
 }
