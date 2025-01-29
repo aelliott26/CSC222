@@ -233,5 +233,37 @@ BigInt BigInt::operator-(const BigInt& other) const {
 }
 
 BigInt BigInt::operator*(const BigInt& other) const {
-    return BigInt("0");
+    bool productnegative = (this->negative ^ other.negative); 
+    int len1 = this->digits.size();
+    int len2 = other.digits.size();
+
+        string result(len1 + len2, '0');
+
+
+    for (int i = len1 - 1; i >= 0; --i) {
+        int carry = 0;
+        int digit1 = to_num(this->digits[i]);
+        for (int j = len2 - 1; j >= 0; --j) {
+            int digit2 = to_num(other.digits[j]);
+            int temp = to_num(result[i + j + 1]) + digit1 * digit2 + carry;
+            result[i + j + 1] = digit_to_char(temp % 10);
+            carry = temp / 10;
 }
+        result[i] = digit_to_char(to_num(result[i]) + carry);
+}
+
+    int startpos = result.find_first_not_of('0');
+    if (startpos != std::string::npos) {
+        result = result.substr(startpos);
+}
+    else {
+        result = "0";
+}
+
+    if (productnegative && result != "0") {
+        result = "-" + result;
+}
+
+    return BigInt(result);
+}
+
