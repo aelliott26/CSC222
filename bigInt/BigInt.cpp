@@ -190,10 +190,45 @@ BigInt BigInt::operator+(const BigInt& other) const{
     return BigInt(increment_digit_string(leading_digits) +
                   summed_common_digits.substr(2));
 }
-BigInt BigInt::operator-(const BigInt& other) const{
-    if ((*this).digits.size() == other.digits.size()) {
-        string raw_sum = sub_common_len_digit_strs((*this).digits, other.digits);
-        return BigInt(raw_sum);
+
+BigInt BigInt::operator-(const BigInt& BigInt2) const {
+    if (this->negative != BigInt2.negative) {
+        BigInt temp = BigInt2;
+        temp.negative = !BigInt2.negative;
+        return *this + temp;
     }
-    return 0;
+
+    if (*this < BigInt2) {
+        BigInt result = BigInt2 - *this;
+        result.negative = !this->negative;
+        return result;
+    }
+
+    string result(digits.size(), '0');
+    char borrow = 0;
+    int this_len = digits.size(), other_len = BigInt2.digits.size();
+
+    for (int i = 0; i < this_len; ++i) {
+        int digit1 = to_num(digits[this_len - 1 - i]) - borrow;
+        int digit2 = (i < other_len) ? to_num(BigInt2.digits[other_len - 1 - i]) : 0;
+
+        if (digit1 < digit2) {
+            digit1 += 10;
+            borrow = 1;
+        } else {
+            borrow = 0;
+        }
+
+        result[this_len - 1 - i] = digit_to_char(digit1 - digit2);
+    }
+
+    size_t pos = result.find_first_not_of('0');
+    if (pos != string::npos) {
+        result = result.substr(pos);
+    } else {
+        result = "0";
+    }
+
+    return BigInt(this->negative ? "-" + result : result);
 }
+
