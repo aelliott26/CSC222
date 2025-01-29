@@ -191,26 +191,26 @@ BigInt BigInt::operator+(const BigInt& other) const{
                   summed_common_digits.substr(2));
 }
 
-BigInt BigInt::operator-(const BigInt& BigInt2) const {
-    if (this->negative != BigInt2.negative) {
-        BigInt temp = BigInt2;
-        temp.negative = !BigInt2.negative;
+BigInt BigInt::operator-(const BigInt& other) const {
+    if (this->negative != other.negative) {
+        BigInt temp = other;
+        temp.negative = !other.negative;
         return *this + temp;
     }
 
-    if (*this < BigInt2) {
-        BigInt result = BigInt2 - *this;
+    if (*this < other) {
+        BigInt result = other - *this;
         result.negative = !this->negative;
         return result;
     }
 
     string result(digits.size(), '0');
     char borrow = 0;
-    int this_len = digits.size(), other_len = BigInt2.digits.size();
+    int this_len = digits.size(), other_len = other.digits.size();
 
     for (int i = 0; i < this_len; ++i) {
         int digit1 = to_num(digits[this_len - 1 - i]) - borrow;
-        int digit2 = (i < other_len) ? to_num(BigInt2.digits[other_len - 1 - i]) : 0;
+        int digit2 = (i < other_len) ? to_num(other.digits[other_len - 1 - i]) : 0;
 
         if (digit1 < digit2) {
             digit1 += 10;
@@ -232,3 +232,6 @@ BigInt BigInt::operator-(const BigInt& BigInt2) const {
     return BigInt(this->negative ? "-" + result : result);
 }
 
+BigInt BigInt::operator*(const BigInt& other) const {
+    return BigInt("0");
+}

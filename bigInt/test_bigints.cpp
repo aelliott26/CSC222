@@ -126,4 +126,15 @@ TEST_CASE("Test can subtract BigInts") {
     BigInt i5("1");
     CHECK((i4 - i5).to_string() == "9999");
     CHECK((i3 - i2).to_string() == "42889");
-}	
+}
+
+TEST_CASE("Test can multiply BigInts") {
+    BigInt i1("10");
+    BigInt i2("321");
+    BigInt i3("-100");
+    BigInt i4("123456789123456789123456789");
+    CHECK((i1 * i2).to_string() == "3210");
+    CHECK((i2 * i3).to_string() == "-32100");
+    CHECK((i1 * i4).to_string() == "1234567891234567891234567890");
+}
+	

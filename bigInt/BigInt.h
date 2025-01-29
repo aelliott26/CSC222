@@ -27,5 +27,6 @@ class BigInt
     bool operator<=(const BigInt& other) const;
     BigInt operator+(const BigInt& other) const;
     BigInt operator-(const BigInt& other) const;
-    BigInt negate() const;
+    BigInt operator*(const BigInt& other) const;
+
 };
